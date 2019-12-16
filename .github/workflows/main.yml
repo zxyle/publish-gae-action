@@ -3,7 +3,7 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Pushlish project to Google App Engine
     steps:
     - name: Hello world action step
       uses: zxyle/pushlish-gae-action@master
