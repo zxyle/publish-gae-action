@@ -12,7 +12,6 @@ This project uses this Actions to deploy to Google App Engine.
 
 ## Usage
 ```yaml
-steps:
 - name: Publish to GAE
   uses: zxyle/publish-gae-action@master
 ```
