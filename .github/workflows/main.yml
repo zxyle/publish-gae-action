@@ -1,7 +1,7 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  build:
     runs-on: ubuntu-latest
     name: Pushlish project to Google App Engine
     steps:
