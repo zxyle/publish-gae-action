@@ -1,4 +1,6 @@
 # publish-gae-action
+[![Build Status](https://github.com/zxyle/publish-gae-action/workflows/Publish%20GAE/badge.svg)](https://github.com/zxyle/publish-gae-action/actions?query=workflow%3A%22Test+Actions%22)
+
 
 This action deploying your application to Google App Engine.
 
