@@ -4,6 +4,8 @@ This action deploying your application to Google App Engine.
 
 ## Example
 
+This project uses this Actions to deploy to Google App Engine.
+
 [BoardCAM.org](https://github.com/BoardCAM/BoardCAM.org/blob/master/.github/workflows/publishgae.yml)
 
 ## Usage
@@ -13,5 +15,5 @@ steps:
   uses: zxyle/publish-gae-action@master
 ```
 
-# License
+## License
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
