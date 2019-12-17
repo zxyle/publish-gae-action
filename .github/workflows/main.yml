@@ -6,7 +6,7 @@ jobs:
     name: Pushlish project to Google App Engine
     steps:
     - name: Hello world action step
-      uses: zxyle/publish-gae-action@1.1
+      uses: zxyle/publish-gae-action@master
 
     - name: Get gcloud version
       run: gcloud version

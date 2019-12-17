@@ -7,9 +7,7 @@ ENV GAE_PYTHONPATH=${HOME}/.cache/google_appengine \
     CLOUDSDK_CORE_DISABLE_PROMPTS=1 \
     CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 
-#RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list && \
-#  apt-get update && apt-get install -y \
-#  lsb-core
+#RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
 
 # Install Google App Engine Python SDK
 # Create environment variable for correct distribution

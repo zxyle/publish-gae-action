@@ -2,8 +2,14 @@
 
 This action deploying your application to Google App Engine.
 
-## Inputs
-## Outputs
+## Usage
+```yaml
+steps:
+    - name: Publish to GAE
+      uses: zxyle/publish-gae-action@master
+```
 
-## Example usage
-uses: zxyle/pushlish-gae-action@master
+
+
+# License
+The scripts and documentation in this project are released under the [MIT License](LICENSE)
