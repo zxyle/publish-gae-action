@@ -9,7 +9,7 @@ ENV GAE_PYTHONPATH=${HOME}/.cache/google_appengine \
 
 #RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
 RUN apt-get update && apt-get install -y \
-  lsb-core \
+  curl \
   python3-pip
 
 # Install Google App Engine Python SDK
