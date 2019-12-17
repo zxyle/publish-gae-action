@@ -5,10 +5,9 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Pushlish project to Google App Engine
     steps:
     - name: Install gcloud SDK
       uses: zxyle/publish-gae-action@master
 
-    - name: Get gcloud version
+    - name: Print gcloud SDK version
       run: gcloud version
