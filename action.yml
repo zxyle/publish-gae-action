@@ -1,16 +1,6 @@
-name: 'Deploy Google App Engine'
-description: 'Greet someone and record the time'
+name: 'Deploy Google App Engine Project'
+description: 'Deploy Google App Engine Project'
 author: 'Xiang Zheng'
-#inputs:
-#  who-to-greet:  # id of input
-#    description: 'Who to greet'
-#    required: true
-#    default: 'World'
-#outputs:
-#  time: # id of output
-#    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-#  args:
-#    - ${{ inputs.who-to-greet }}
