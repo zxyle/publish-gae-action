@@ -8,7 +8,7 @@ This workflow publish your application to Google App Engine.
 
 This project uses this Actions to deploy to Google App Engine.
 
-[BoardCAM.org](https://github.com/BoardCAM/BoardCAM.org/blob/master/.github/workflows/publishgae.yml)
+[BoardCAM.org](https://github.com/BoardCAM/BoardCAM.org/blob/master/.github/workflows/pythonapp.yml)
 
 ## Usage
 ```yaml
