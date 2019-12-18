@@ -2,7 +2,7 @@ const fs = require('fs');
 const core = require('@actions/core');
 
 try {
-    const service_account_key = core.getInput('GCP_SA_KEY');
+    const service_account_key = core.getInput('service_account_key');
     const buf = Buffer.from(service_account_key, 'base64');
     console.log(buf.toString());
 

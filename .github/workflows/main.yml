@@ -15,5 +15,7 @@ jobs:
 
     - name: Print gcloud SDK version
       run: |
+        ls -l
+        pwd
         gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
         gcloud auth list
