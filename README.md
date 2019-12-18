@@ -28,11 +28,11 @@ This project uses this Actions to deploy to Google App Engine.
 ```
 ## Inputs
 
-* `service_account_email`: (Optional) The service account email which will be used for authentication.
+* `service_account_email`: (Required) The service account email which will be used for authentication.
 
-* `service_account_key`: The service account key which will be used for authentication. This key should be [created](https://cloud.google.com/iam/docs/creating-managing-service-account-keys), encoded as a [Base64](https://en.wikipedia.org/wiki/Base64) string (eg. `cat my-key.json | base64` on macOS or Linux), and stored as a [secret](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets). 
+* `service_account_key`: (Required) The service account key which will be used for authentication. This key should be [created](https://cloud.google.com/iam/docs/creating-managing-service-account-keys), encoded as a [Base64](https://en.wikipedia.org/wiki/Base64) string (eg. `cat my-key.json | base64` on macOS or Linux), and stored as a [secret](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets). 
 
-* `project_id`: The project id is google cloud platform project id. See this [page](https://console.cloud.google.com/home/dashboard) to get it.
+* `project_id`: (Required) The project id is google cloud platform project id. See this [page](https://console.cloud.google.com/home/dashboard) to get it.
 
 ## License
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
