@@ -13,7 +13,7 @@ gcloud config set project "$3"
 
 gcloud auth activate-service-account "$1" --key-file="client-secret.json"
 
-glcoud info
+gcloud info
 
 gcloud auth list
 pwd
