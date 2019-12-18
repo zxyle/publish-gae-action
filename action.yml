@@ -1,5 +1,5 @@
-name: 'Deploy Google App Engine Project'
-description: 'Deploy Google App Engine Project'
+name: 'Publish app to Google App Engine'
+description: 'Publish app to Google App Engine'
 author: 'Xiang Zheng'
 inputs:
   service_account_email:
