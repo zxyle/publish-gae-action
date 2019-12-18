@@ -2,15 +2,15 @@ name: 'Deploy Google App Engine Project'
 description: 'Deploy Google App Engine Project'
 author: 'Xiang Zheng'
 inputs:
-  GCP_SA_EMAIL:
+  service_account_email:
     description: 'GCP auth email'
     required: true
 
-  GCP_SA_KEY:
+  service_account_key:
     description: 'GCP secret key'
     required: true
 
-  PROJECT_ID:
+  proejct_id:
     description: 'GAE project id'
     required: true
 

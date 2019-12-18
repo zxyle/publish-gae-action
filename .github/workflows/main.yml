@@ -11,15 +11,7 @@ jobs:
       with:
         service_account_email: ${{ secrets.GCP_SA_EMAIL }}
         service_account_key: ${{ secrets.GCP_SA_KEY }}
+        proejct_id: ${{ secrets.PROJECT_ID }}
 
     - name: Print gcloud SDK version
       run: gcloud info
-
-    - name: Print gcloud SDK version
-      run: gcloud info
-
-    - name: Deploy to GAE
-      run: |
-        gcloud config set project ${{ secrets.PROJECT_ID }}
-        gcloud -q app deploy app.yaml --promote
-        gcloud -q app deploy cron.yaml
