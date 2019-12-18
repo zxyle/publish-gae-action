@@ -6,16 +6,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Install gcloud SDK
+    - name: Initialize Google Cloud SDK
       uses: zxyle/publish-gae-action@master
       with:
         service_account_email: ${{ secrets.GCP_SA_EMAIL }}
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         project_id: ${{ secrets.PROJECT_ID }}
-        account: ${{ secrets.ACCOUNT }}
 
     - name: Print gcloud SDK version
       run: |
         gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file="client-secret.json"
-        gcloud config set account ${{ secrets.ACCOUNT }}
         gcloud auth list

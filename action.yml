@@ -3,11 +3,11 @@ description: 'Deploy Google App Engine Project'
 author: 'Xiang Zheng'
 inputs:
   service_account_email:
-    description: 'GCP auth email'
+    description: 'The service account email which will be used for authentication.'
     required: true
 
   service_account_key:
-    description: 'GCP secret key'
+    description: 'The service account key which will be used for authentication.'
     required: true
 
   project_id:
@@ -15,12 +15,8 @@ inputs:
     required: true
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.service_account_email }}
-    - ${{ inputs.service_account_key }}
-    - ${{ inputs.project_id }}
+  using: 'node12'
+  main: 'index.js'
 
 branding:
   icon: 'award'
