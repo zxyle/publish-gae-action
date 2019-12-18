@@ -11,7 +11,7 @@ jobs:
       with:
         service_account_email: ${{ secrets.GCP_SA_EMAIL }}
         service_account_key: ${{ secrets.GCP_SA_KEY }}
-        proejct_id: ${{ secrets.PROJECT_ID }}
+        project_id: ${{ secrets.PROJECT_ID }}
 
     - name: Print gcloud SDK version
       run: gcloud info
