@@ -1,6 +1,27 @@
 name: 'Deploy Google App Engine Project'
 description: 'Deploy Google App Engine Project'
 author: 'Xiang Zheng'
+inputs:
+  GCP_SA_EMAIL:
+    description: 'GCP auth email'
+    required: true
+
+  GCP_SA_KEY:
+    description: 'GCP secret key'
+    required: true
+
+  PROJECT_ID:
+    description: 'GAE project id'
+    required: true
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.GCP_SA_EMAIL }}
+    - ${{ inputs.GCP_SA_KEY }}
+    - ${{ inputs.PROJECT_ID }}
+
+branding:
+  icon: 'award'
+  color: 'blue'

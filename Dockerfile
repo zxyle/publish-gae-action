@@ -31,3 +31,11 @@ RUN apt-get update && \
     google-cloud-sdk-app-engine-python \
 #    google-cloud-sdk-cbt \
     google-cloud-sdk-app-engine-python-extras
+
+RUN gcloud auth activate-service-account ${serviceAccountEmail} --key-file=${tmpKeyFilePath}
+
+# Copies your code file from your action repository to the filesystem path `/` of the container
+COPY entrypoint.sh /entrypoint.sh
+
+# Code file to execute when the docker container starts up (`entrypoint.sh`)
+ENTRYPOINT ["/entrypoint.sh"]
