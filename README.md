@@ -14,6 +14,10 @@ This project uses this Actions to deploy to Google App Engine.
 ```yaml
 - name: Publish to GAE
   uses: zxyle/publish-gae-action@master
+  with:
+    service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+    service_account_key: ${{ secrets.GCP_SA_KEY }}
+    project_id: ${{ secrets.PROJECT_ID }}
 ```
 
 ## License
