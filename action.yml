@@ -10,7 +10,7 @@ inputs:
     description: 'GCP secret key'
     required: true
 
-  proejct_id:
+  project_id:
     description: 'GAE project id'
     required: true
 
@@ -18,9 +18,9 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.GCP_SA_EMAIL }}
-    - ${{ inputs.GCP_SA_KEY }}
-    - ${{ inputs.PROJECT_ID }}
+    - ${{ inputs.service_account_email }}
+    - ${{ inputs.service_account_key }}
+    - ${{ inputs.project_id }}
 
 branding:
   icon: 'award'
