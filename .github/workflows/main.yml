@@ -13,7 +13,5 @@ jobs:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         project_id: ${{ secrets.PROJECT_ID }}
 
-      run: gcloud auth list
-
     - name: Print gcloud SDK version
       run: gcloud auth list
