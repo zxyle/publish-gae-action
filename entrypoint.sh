@@ -9,3 +9,6 @@ echo "$pwd" >>"client-secret.json"
 gcloud config set project "$3"
 
 gcloud auth activate-service-account "$1" --key-file="client-secret.json"
+
+
+pwd
