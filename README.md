@@ -12,7 +12,7 @@ This project uses this Actions to deploy to Google App Engine.
 
 ## Usage
 ```yaml
-- name: Publish app to Google App Engine
+- name: Initialize Google Cloud SDK
   uses: zxyle/publish-gae-action@master
   with:
     service_account_email: ${{ secrets.GCP_SA_EMAIL }}
