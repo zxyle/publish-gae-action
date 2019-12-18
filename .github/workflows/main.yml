@@ -14,4 +14,4 @@ jobs:
         project_id: ${{ secrets.PROJECT_ID }}
 
     - name: Print gcloud SDK version
-      run: gcloud info
+      run: gcloud auth list
