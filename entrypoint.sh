@@ -1,10 +1,9 @@
-#!/bin/sh -l
+#!/usr/bin/env bash
 
 export serviceAccountEmail="$1"
 export tmpKeyFilePath="client-secret.json"
 
-# shellcheck disable=SC2039
-pwd=$(base64 -d <<<"$2") # 解码
+pwd=$(base64 -d <<<"$2")
 echo "$pwd" >>"client-secret.json"
 
 gcloud auth activate-service-account "$1" --key-file="client-secret.json"
