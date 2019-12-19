@@ -2,7 +2,7 @@
 [![Build Status](https://github.com/zxyle/publish-gae-action/workflows/Test%20Actions/badge.svg)](https://github.com/zxyle/publish-gae-action/actions?query=workflow%3A%22Test+Actions%22)
 
 
-This workflow publish your application to Google App Engine.
+This workflow allowed you publish application to [Google App Engine](https://cloud.google.com/appengine/).
 
 ## Example
 
@@ -33,6 +33,9 @@ This project uses this Actions to deploy to Google App Engine.
 * `service_account_key`: (Required) The service account key which will be used for authentication. This key should be [created](https://cloud.google.com/iam/docs/creating-managing-service-account-keys), encoded as a [Base64](https://en.wikipedia.org/wiki/Base64) string (eg. `cat my-key.json | base64` on macOS or Linux), and stored as a [secret](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets). 
 
 * `project_id`: (Required) The project_id is google cloud platform project id. See this [page](https://console.cloud.google.com/home/dashboard) to get it.
+
+## Note
+Use `272.0.0` Google Cloud SDK by default on GitHub-hosted runners. If you need latest version, please refer to this [action](https://github.com/GoogleCloudPlatform/github-actions/tree/master/setup-gcloud).
 
 ## License
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
