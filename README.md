@@ -2,11 +2,11 @@
 [![Build Status](https://github.com/zxyle/publish-gae-action/workflows/Test%20Actions/badge.svg)](https://github.com/zxyle/publish-gae-action/actions?query=workflow%3A%22Test+Actions%22)
 
 
-This workflow allowed you publish application to [Google App Engine](https://cloud.google.com/appengine/).
+This action allowed you publish application to [Google App Engine](https://cloud.google.com/appengine/).
 
 ## Example
 
-This project uses this Actions to deploy to Google App Engine.
+This project uses this action to published to Google App Engine.
 
 [BoardCAM.org](https://github.com/BoardCAM/BoardCAM.org/blob/master/.github/workflows/pythonapp.yml)
 
@@ -24,6 +24,8 @@ This project uses this Actions to deploy to Google App Engine.
     gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
     gcloud config set project ${{ secrets.PROJECT_ID }}
     gcloud -q app deploy app.yaml --promote
+    
+    # Suppose you need a cron task.
     gcloud -q app deploy cron.yaml
 ```
 ## Inputs
@@ -35,7 +37,7 @@ This project uses this Actions to deploy to Google App Engine.
 * `project_id`: (Required) The project_id is google cloud platform project id. See this [page](https://console.cloud.google.com/home/dashboard) to get it.
 
 ## Note
-Use `272.0.0` Google Cloud SDK by default on GitHub-hosted runners. If you need latest version, please refer to this [action](https://github.com/GoogleCloudPlatform/github-actions/tree/master/setup-gcloud).
+Use `272.0.0` Google Cloud SDK by default on GitHub-hosted runners. If you need latest version, please refer to this [action](https://github.com/GoogleCloudPlatform/github-actions/tree/master/setup-gcloud). But in most cases, this is enough.
 
 ## License
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
