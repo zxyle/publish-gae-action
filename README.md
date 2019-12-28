@@ -21,6 +21,7 @@ This project uses this action to published to Google App Engine.
 
 - name: Publish app to Google App Engine
   run: |
+    # This client-secret.json is converted by GCP_SA_KEY.
     gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
     gcloud config set project ${{ secrets.PROJECT_ID }}
     gcloud -q app deploy app.yaml --promote
