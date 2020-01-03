@@ -38,7 +38,7 @@ This project uses this action to published to Google App Engine.
 * `project_id`: (Required) The project_id is google cloud platform project id. See this [page](https://console.cloud.google.com/home/dashboard) to get it.
 
 ## Note
-Use `272.0.0` Google Cloud SDK by default on GitHub-hosted runners. If you need latest version, please refer to this [action](https://github.com/GoogleCloudPlatform/github-actions/tree/master/setup-gcloud). But in most cases, this is enough.
+Use `272.0.0` Google Cloud SDK by default on [GitHub-hosted runners](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/software-installed-on-github-hosted-runners#ubuntu-1804-lts). If you need latest version, please refer to this [action](https://github.com/GoogleCloudPlatform/github-actions/tree/master/setup-gcloud). But in most cases, this is enough.
 
 ## License
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
