@@ -14,6 +14,10 @@ inputs:
     description: 'GAE project id'
     required: true
 
+  gae_variables:
+    description: 'GAE variables to be written to the app.yaml file'
+    required: false
+
 runs:
   using: 'node12'
   main: 'index.js'

@@ -12,8 +12,7 @@ try {
 
     let data = yaml.safeLoad(fileContents);
 
-    // Get the environment variables if they exists
-    // @todo Only run this if the user wants to or has secret variables
+    // @todo Only run this if the user wants to
     const secrets = core.getInput('gae_variables');
     const secrets_buffer = Buffer.from(secrets, 'base64');
 
