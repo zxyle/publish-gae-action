@@ -18,6 +18,8 @@ This project uses this action to published to Google App Engine.
     service_account_email: ${{ secrets.GCP_SA_EMAIL }}
     service_account_key: ${{ secrets.GCP_SA_KEY }}
     project_id: ${{ secrets.PROJECT_ID }}
+    # An optional variables parameter can be used
+    gae_variables: ${{ secrets.GAE_VARIABLES }}
 
 - name: Publish app to Google App Engine
   run: |
@@ -37,8 +39,35 @@ This project uses this action to published to Google App Engine.
 
 * `project_id`: (Required) The project_id is google cloud platform project id. See this [page](https://console.cloud.google.com/home/dashboard) to get it.
 
+* `gae_variables`: (Optional) App engine variables. This should be a json object encoded as a base64 string. This will be written into the app.yaml file at the root of your project. A sample variable file is shown [here](##sample-variable-file).
+
 ## Note
 Use `272.0.0` Google Cloud SDK by default on [GitHub-hosted runners](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/software-installed-on-github-hosted-runners#ubuntu-1804-lts). If you need latest version, please refer to this [action](https://github.com/GoogleCloudPlatform/github-actions/tree/master/setup-gcloud). But in most cases, this is enough.
+
+## Sample variable file
+```json
+{
+  "beta_settings": {
+    "cloud_sql_instances": "my_sql_instance"
+  },
+  "env_variables": {
+    "DB_CONNECTION": "mysql",
+    "DB_HOST": "127.0.0.1",
+    "DB_PORT": 3306,
+    "DB_USER": "mydbuser",
+    "DB_DATABASE": "my_database",
+    "DB_PASSWORD": "password",
+    "DB_SOCKET": "/cloudsql/mys_sql_instance"
+  }
+}
+```
+
+On a Mac you can encode this into a base64 string by running the following command;
+
+```shell script
+base64 -i myvariables.json
+```
+
 
 ## License
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
