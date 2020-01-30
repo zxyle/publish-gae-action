@@ -6,20 +6,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: List files
-      run: |
-        ls -lh
-    - name: Initialize Google Cloud SDK
-      # This action is located on https://github.com/zxyle/publish-gae-action
-      uses: zxyle/publish-gae-action@master
-      with:
-        service_account_email: ${{ secrets.GCP_SA_EMAIL }}
-        service_account_key: ${{ secrets.GCP_SA_KEY }}
-        project_id: ${{ secrets.PROJECT_ID }}
-        gae_variables: ewogICJiZXRhX3NldHRpbmdzIjogewogICAgImNsb3VkX3NxbF9pbnN0YW5jZXMiOiAibXlfc3FsX2luc3RhbmNlIgogIH0sCiAgImVudl92YXJpYWJsZXMiOiB7CiAgICAiREJfQ09OTkVDVElPTiI6ICJteXNxbCIsCiAgICAiREJfSE9TVCI6ICIxMjcuMC4wLjEiLAogICAgIkRCX1BPUlQiOiAzMzA2LAogICAgIkRCX1VTRVIiOiAibXlkYnVzZXIiLAogICAgIkRCX0RBVEFCQVNFIjogIm15X2RhdGFiYXNlIiwKICAgICJEQl9QQVNTV09SRCI6ICJwYXNzd29yZCIsCiAgICAiREJfU09DS0VUIjogIi9jbG91ZHNxbC9teXNfc3FsX2luc3RhbmNlIgogIH0KfQo= 
+      - uses: actions/checkout@v1
+      - name: List files
+        run: |
+          ls -lh
+      - name: Initialize Google Cloud SDK
+        # This action is located on https://github.com/zxyle/publish-gae-action
+        uses: zxyle/publish-gae-action@master
+        with:
+          service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          project_id: ${{ secrets.PROJECT_ID }}
+          gae_variables: ewogICJiZXRhX3NldHRpbmdzIjogewogICAgImNsb3VkX3NxbF9pbnN0YW5jZXMiOiAibXlfc3FsX2luc3RhbmNlIgogIH0sCiAgImVudl92YXJpYWJsZXMiOiB7CiAgICAiREJfQ09OTkVDVElPTiI6ICJteXNxbCIsCiAgICAiREJfSE9TVCI6ICIxMjcuMC4wLjEiLAogICAgIkRCX1BPUlQiOiAzMzA2LAogICAgIkRCX1VTRVIiOiAibXlkYnVzZXIiLAogICAgIkRCX0RBVEFCQVNFIjogIm15X2RhdGFiYXNlIiwKICAgICJEQl9QQVNTV09SRCI6ICJwYXNzd29yZCIsCiAgICAiREJfU09DS0VUIjogIi9jbG91ZHNxbC9teXNfc3FsX2luc3RhbmNlIgogIH0KfQo=
 
-    - name: Print Google Cloud SDK version
-      run: |
-        # This client-secret.json is converted by GCP_SA_KEY.
-        gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
-        gcloud info
+      - name: Print Google Cloud SDK version
+        run: |
+          # This client-secret.json is converted by GCP_SA_KEY.
+          gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
+          gcloud info
