@@ -6,6 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: List files
+        run: ls -lh
     - name: Initialize Google Cloud SDK
       # This action is located on https://github.com/zxyle/publish-gae-action
       uses: zxyle/publish-gae-action@master
