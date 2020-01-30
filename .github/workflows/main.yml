@@ -13,6 +13,7 @@ jobs:
         service_account_email: ${{ secrets.GCP_SA_EMAIL }}
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         project_id: ${{ secrets.PROJECT_ID }}
+        gae_variables: ewogICJiZXRhX3NldHRpbmdzIjogewogICAgImNsb3VkX3NxbF9pbnN0YW5jZXMiOiAibXlfc3FsX2luc3RhbmNlIgogIH0sCiAgImVudl92YXJpYWJsZXMiOiB7CiAgICAiREJfQ09OTkVDVElPTiI6ICJteXNxbCIsCiAgICAiREJfSE9TVCI6ICIxMjcuMC4wLjEiLAogICAgIkRCX1BPUlQiOiAzMzA2LAogICAgIkRCX1VTRVIiOiAibXlkYnVzZXIiLAogICAgIkRCX0RBVEFCQVNFIjogIm15X2RhdGFiYXNlIiwKICAgICJEQl9QQVNTV09SRCI6ICJwYXNzd29yZCIsCiAgICAiREJfU09DS0VUIjogIi9jbG91ZHNxbC9teXNfc3FsX2luc3RhbmNlIgogIH0KfQo= 
 
     - name: Print Google Cloud SDK version
       run: |
