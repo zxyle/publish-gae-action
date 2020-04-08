@@ -41,6 +41,9 @@ This project uses this action to published to Google App Engine.
 
 * `gae_variables`: (Optional) App engine variables. This should be a json object encoded as a base64 string. This will be written into the app.yaml file at the root of your project. A sample variable file is shown [here](#sample-variable-file).
 
+* `gae_config_path`: (Optional) Path to the `app.yml` to use (`./my/neseted/package/app.yml`). Defaults to `./app.yml`.
+
+
 ## Note
 Use `272.0.0` Google Cloud SDK by default on [GitHub-hosted runners](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/software-installed-on-github-hosted-runners#ubuntu-1804-lts). If you need latest version, please refer to this [action](https://github.com/GoogleCloudPlatform/github-actions/tree/master/setup-gcloud). But in most cases, this is enough.
 
