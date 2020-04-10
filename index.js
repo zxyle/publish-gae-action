@@ -8,10 +8,8 @@ const deepmerge = require('deepmerge');
  *
  */
 try {
-    const fileContents = fs.readFileSync(
-        core.getInput('gae_config_path') || './app.yaml',
-        'utf8'
-     );
+    const gaeConfigPath = core.getInput('gae_config_path') || './app.yaml';
+    const fileContents = fs.readFileSync(gaeConfigPath, 'utf8');
 
     let data = yaml.safeLoad(fileContents);
 
@@ -21,7 +19,7 @@ try {
         const secrets_buffer = Buffer.from(secrets, 'base64');
         data = deepmerge(data, JSON.parse(secrets_buffer.toString()));
         let yamlStr = yaml.safeDump(data);
-        fs.writeFileSync('app.yaml', yamlStr, 'utf8');
+        fs.writeFileSync(gaeConfigPath, yamlStr, 'utf8');
     }
 
 } catch (error) {
