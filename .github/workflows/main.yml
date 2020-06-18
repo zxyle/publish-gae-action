@@ -21,3 +21,4 @@ jobs:
           # This client-secret.json is converted by GCP_SA_KEY.
           gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
           gcloud info
+          ls -lh
