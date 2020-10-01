@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/zxyle/publish-gae-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.0",
+    "@actions/core": "^1.2.6",
     "deepmerge": "^4.2.2",
     "js-yaml": "^3.13.1"
   }
