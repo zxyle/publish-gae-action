@@ -10,6 +10,10 @@ inputs:
     description: 'The service account key which will be used for authentication.'
     required: true
 
+  client_secret_file:
+    description: 'Optionaly choose where the service account .json file will be saved (defaults to ./client-secret.json).'
+    required: false
+
   project_id:
     description: 'GAE project id'
     required: true
@@ -17,11 +21,11 @@ inputs:
   gae_variables:
     description: 'GAE variables to be written to the app.yaml file'
     required: false
-   
+
   gae_config_path:
     description: 'Path to the app.yml, Defaults to ./app.yml'
     required: false
-  
+
 
 runs:
   using: 'node12'
