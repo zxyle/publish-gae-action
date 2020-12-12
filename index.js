@@ -30,9 +30,11 @@ try {
 
 try {
     const service_account_key = core.getInput('service_account_key');
+    const client_secret_file = core.getInput('client_secret_file');
     const buf = Buffer.from(service_account_key, 'base64');
+    const save_path = client_secret_file ? client_secret_file : './client-secret.json'
 
-    fs.writeFile('./client-secret.json', buf.toString(), function (err) {
+    fs.writeFile(save_path, buf.toString(), function (err) {
         if (err) {
             console.error(err);
         } else {
